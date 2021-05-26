@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <title>YouTube</title>
   </head>
   <body>
@@ -19,12 +24,24 @@
         </button>
         <div class="search-bar">
           <input class="search-input" type="text" placeholder="Search" />
+          <button class="btn search-btn">
+            <img src="images/magnify.svg" alt="magnify" />
+          </button>
         </div>
         <div class="user-options">
-          <button class="btn video"></button>
-          <button class="btn apps"></button>
-          <button class="btn options"></button>
-          <button class="btn sign"></button>
+          <button class="btn add-video-btn">
+            <img src="images/video-plus.svg" alt="add video" />
+          </button>
+          <button class="btn apps-btn">
+            <img src="images/apps.svg" alt="apps" />
+          </button>
+          <button class="btn options-btn">
+            <img src="images/dots-vertical.svg" alt="options" />
+          </button>
+          <button class="btn sign-btn">
+            <img src="images/account-circle.svg" alt="no user avatar" />
+            <span>SIGN IN</span>
+          </button>
         </div>
       </header>
 
@@ -32,11 +49,15 @@
         <main>
           <section class="video-container">
             <div class="player">
+              <img
+                src="https://img.youtube.com/vi/LLytOHE8cJU/maxresdefault.jpg"
+                alt="img"
+              />
               <iframe
-                src="https://www.youtube.com/watch?v=LLytOHE8cJU"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen=""
+                src="https://www.youtube.com/embed/LLytOHE8cJU"
                 frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
               ></iframe>
             </div>
             <div class="video-info">
@@ -72,21 +93,52 @@
             </div>
           </section>
           <section class="description">
-            <p class="video-description-para">
-              Working with remote teams is more difficult than working when a
-              team is sat in the same room. Managing remote teams when they are
-              spread geographically is extremely difficult to do well. This is
-              mostly about communications and using team structure and team
-              culture to make offshore development and remote team collaboration
-              work. Continuous Delivery, DevOps and agile development techniques
-              provide a better basis to make this work than more traditional
-              approaches, but it is still more difficult. In this episode, Dave
-              Farley offers some advice on how to make remote teams effective.
-              He describes some approaches to team organisation, team culture,
-              people’s roles in teams as well as the technical consideration
-              necessary to make it all work. How do you make “remote pair
-              programming” work, Dave can tell you.
-            </p>
+            <div class="channel-info">
+              <div class="channel-logo">
+                <a
+                  href="https://www.youtube.com/channel/UCCfqyGl3nq_V0bo64CjZh8g"
+                  target="_blank"
+                >
+                  <img
+                    id="img"
+                    src="https://yt3.ggpht.com/ytc/AAUvwnjijH7BpjXZTcK86z1C2xSOFnKW6Qlorsn7yHrk=s88-c-k-c0x00ffffff-no-rj"
+                    width="80"
+                  />
+                </a>
+              </div>
+              <div class="channel-primary-info">
+                <div class="channel-name">
+                  <a
+                    class="channel-link"
+                    href="https://www.youtube.com/channel/UCCfqyGl3nq_V0bo64CjZh8g"
+                    target="_blank"
+                  >
+                    Continuos delivery
+                  </a>
+                  <img src="images/check-circle.svg" alt="verified" />
+                </div>
+              </div>
+
+              <button class="btn subscribe-btn">SUBSCRIBE</button>
+            </div>
+            <div class="video-description">
+              <p class="video-description-para">
+                Working with remote teams is more difficult than working when a
+                team is sat in the same room. Managing remote teams when they
+                are spread geographically is extremely difficult to do well.
+                This is mostly about communications and using team structure and
+                team culture to make offshore development and remote team
+                collaboration work. Continuous Delivery, DevOps and agile
+                development techniques provide a better basis to make this work
+                than more traditional approaches, but it is still more
+                difficult. In this episode, Dave Farley offers some advice on
+                how to make remote teams effective. He describes some approaches
+                to team organisation, team culture, people’s roles in teams as
+                well as the technical consideration necessary to make it all
+                work. How do you make “remote pair programming” work, Dave can
+                tell you.
+              </p>
+            </div>
             <button class="btn show-more-btn">SHOW MORE</button>
           </section>
         </main>
@@ -95,16 +147,29 @@
             <div class="autoplay">
               <span>up-next</span>
               <span>AUTOPLAY</span>
-              <button class="switch">::before</button>
+              <button class="switch"></button>
             </div>
             <a
               class="thumbnail"
               href="https://www.youtube.com/watch?v=5CXSEINRojM"
+              target="_blank"
             >
               <div class="thumbnail-img">
                 <img
                   src="https://i.ytimg.com/an_webp/zYj70EsD7uI/mqdefault_6s.webp?du=3000&amp;sqp=CKaOmYUG&amp;rs=AOn4CLAbAT0LyG1fhaWMj2qq4Ys8IGtwgw"
+                  alt="recommendation video"
                 />
+                <div class="duration">
+                  <span>19:42</span>
+                </div>
+                <div class="thumbnail-overlay">
+                  <button class="btn">
+                    <img
+                      src="images/dots-vertical-thumb.svg"
+                      alt="thumbnail options"
+                    />
+                  </button>
+                </div>
               </div>
               <div class="thumbnail-info">
                 <h3 class="thumbnail-title">
@@ -307,7 +372,142 @@
             </a>
           </section>
         </aside>
-        <section class="comment-section"></section>
+        <section class="comment-section">
+          <div class="comments-info">
+            <span class="comments-count">22,222 comments</span>
+            <button class="btn sort-btn">
+              <img src="images/sort-variant.svg" alt="sort by" />
+              SORT BY
+            </button>
+          </div>
+          <div class="new-comment">
+            <div class="user-avatar">
+              <img
+                src="//s.ytimg.com/yts/img/avatar_720-vflYJnzBZ.png"
+                alt="user avatar"
+              />
+            </div>
+            <input
+              class="comment-input"
+              type="text"
+              placeholder="Add a public comment..."
+            />
+          </div>
+          <div class="comment">
+            <div class="user-avatar">
+              <img
+                src="https://yt3.ggpht.com/a/AGF-l78vZoNvE4pPXoKWwB1miEObqUxursnGdb5t2Q=s48-c-k-c0xffffffff-no-rj-mo"
+                alt="user avatar"
+              />
+            </div>
+            <div class="comment-info">
+              <div class="comment-user">
+                <span class="user-name">Pepitou</span>
+                <span class="comment-time">1 day ago</span>
+              </div>
+              <div class="comment-text">
+                Everyone: "Why coding is so big?"
+                <br />
+                Coders: "Am I big to you?"
+              </div>
+              <div class="comment-options">
+                <button class="btn cm-like-btn">
+                  <img src="images/thumb-up.svg" alt="comment like button" />
+                  <span>16K</span>
+                </button>
+                <button class="btn cm-dislike-btn">
+                  <img
+                    src="images/thumb-down.svg"
+                    alt="comment dislike button"
+                  />
+                </button>
+                <button class="btn cm-reply-btn">
+                  <span>REPLY</span>
+                </button>
+              </div>
+              <button class="btn cm-show-replies-btn">
+                <img src="images/menu-down.svg" alt="show comment replies" />
+                <span>View 2K replies</span>
+              </button>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="user-avatar">
+              <img
+                src="https://yt3.ggpht.com/a/AGF-l78vZoNvE4pPXoKWwB1miEObqUxursnGdb5t2Q=s48-c-k-c0xffffffff-no-rj-mo"
+                alt="user avatar"
+              />
+            </div>
+            <div class="comment-info">
+              <div class="comment-user">
+                <span class="user-name">Pepitou2</span>
+                <span class="comment-time">12 day ago</span>
+              </div>
+              <div class="comment-text">
+                Everyone: "Why coding is so small?"
+                <br />
+                Coders: "Am I small to you?"
+              </div>
+              <div class="comment-options">
+                <button class="btn cm-like-btn">
+                  <img src="images/thumb-up.svg" alt="comment like button" />
+                  <span>126K</span>
+                </button>
+                <button class="btn cm-dislike-btn">
+                  <img
+                    src="images/thumb-down.svg"
+                    alt="comment dislike button"
+                  />
+                </button>
+                <button class="btn cm-reply-btn">
+                  <span>REPLY</span>
+                </button>
+              </div>
+              <button class="btn cm-show-replies-btn">
+                <img src="images/menu-down.svg" alt="show comment replies" />
+                <span>View 22K replies</span>
+              </button>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="user-avatar">
+              <img
+                src="https://yt3.ggpht.com/a/AGF-l78vZoNvE4pPXoKWwB1miEObqUxursnGdb5t2Q=s48-c-k-c0xffffffff-no-rj-mo"
+                alt="user avatar"
+              />
+            </div>
+            <div class="comment-info">
+              <div class="comment-user">
+                <span class="user-name">Pepitou2</span>
+                <span class="comment-time">12 day ago</span>
+              </div>
+              <div class="comment-text">
+                Everyone: "Why coding is so small?"
+                <br />
+                Coders: "Am I small to you?"
+              </div>
+              <div class="comment-options">
+                <button class="btn cm-like-btn">
+                  <img src="images/thumb-up.svg" alt="comment like button" />
+                  <span>126K</span>
+                </button>
+                <button class="btn cm-dislike-btn">
+                  <img
+                    src="images/thumb-down.svg"
+                    alt="comment dislike button"
+                  />
+                </button>
+                <button class="btn cm-reply-btn">
+                  <span>REPLY</span>
+                </button>
+              </div>
+              <button class="btn cm-show-replies-btn">
+                <img src="images/menu-down.svg" alt="show comment replies" />
+                <span>View 22K replies</span>
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </body>
